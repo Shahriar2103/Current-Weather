@@ -29,6 +29,7 @@ def show_all_businesses():
         business["_id"] = str(business["_id"])
         for review in business["reviews"]:
             review["_id"] = str(review["_id"])
+            
         data_to_return.append(business)
 
     return make_response(jsonify(businesses), 200)
